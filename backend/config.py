@@ -13,7 +13,7 @@ TIMEZONE = os.getenv("TIMEZONE")
 APP_SECRET_KEY = os.getenv("APP_SECRET_KEY")
 
 config = {
-    "SQL_URI": f"mariadb+pymysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_URL}:3306/{DB_NAME}",
+    "SQL_URI": "postgresql+psycopg2://theyearly@localhost:5432/amplace",
     "TIMEZONE": TIMEZONE,
     "APP_SECRET_KEY" : APP_SECRET_KEY
 }

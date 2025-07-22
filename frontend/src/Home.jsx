@@ -8,7 +8,7 @@ const Home = () => {
     const [showLeaderboard, setShowLeaderboard] = useState(false);
     const [leaderboardData, setLeaderboardData] = useState([]);
     const overlayPositionRef = useRef({ top: 0, left: 0 });
-
+    const backendUrl=import.meta.env.VITE_BACKEND
     const cols = 150;
     const rows = 80;
     const boxSize = 10;
@@ -17,7 +17,7 @@ const Home = () => {
 
     const fetchPixelData = async () => {
         try {
-            const response = await fetch('https://amplacebackend.amfoss.in/api/get_pixel');
+            const response = await fetch(backendUrl+'/api/get_pixel');
             const data = await response.json();
             console.log(data);
             if (data.success) {
@@ -38,7 +38,7 @@ const Home = () => {
 
     const fetchLeaderboardData = async () => {
         try {
-            const response = await fetch('https://amplacebackend.amfoss.in/api/get_user_details');
+            const response = await fetch(VITE_BACKEND+'/api/get_user_details');
             const data = await response.json();
             console.log(data);
             if (data.success) {
