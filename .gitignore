@@ -25,3 +25,4 @@ backend/.coverage*
 backend/htmlcov/
 backend/.tox/
 backend/docs/_build/
+backend/lib
