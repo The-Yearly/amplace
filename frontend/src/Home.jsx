@@ -187,7 +187,7 @@ const Home = () => {
     const interval = setInterval(() => {
       fetchPixelData();
       fetchLeaderboardData();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
