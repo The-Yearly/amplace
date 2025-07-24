@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Create an SVG-based cursor using the paintbrush emoji */
 /* Apply the rotated paintbrush emoji as a cursor */
 body {

@@ -44,7 +44,7 @@ jobs:
           PR_NUMBER=${{ github.event.pull_request.number }}
           REPO=${{ github.repository }}
           echo "Fetching files changed in PR #$PR_NUMBER"
-          
+
           # Call the GitHub API to get the list of changed files
           curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                "https://api.github.com/repos/${REPO}/pulls/${PR_NUMBER}/files" \
