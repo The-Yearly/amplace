@@ -79,6 +79,10 @@ def update_pixel():
         finally:
             session.close()
 
+@app.route("/api/test", methods=["GET"])
+def test():
+    return jsonify({"message":"Hi"}), 200
+
 @app.route("/api/get_pixel", methods=["GET"])
 def get_pixel_details():
     if request.method == "GET":
