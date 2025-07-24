@@ -7,9 +7,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-
-app.secret_key = config["APP_SECRET_KEY"]
-
 def check_cooldown(pixel):
     session = Session()
     try:
